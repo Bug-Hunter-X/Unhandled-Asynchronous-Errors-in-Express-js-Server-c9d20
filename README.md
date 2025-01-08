@@ -1,0 +1,6 @@
+# Unhandled Asynchronous Errors in Express.js Server
+This repository demonstrates a common error in Node.js Express.js applications where asynchronous operations might throw errors that are not properly handled, leading to unexpected behavior such as 500 Internal Server Errors.  The solution shows how to effectively handle such errors using try...catch blocks and proper error-handling middleware.
+## Bug
+The `bug.js` file contains an Express.js server that simulates an asynchronous operation.  Half of the time, this operation throws a 500 Internal Server Error because of inadequate error handling within the asynchronous function.  This results in an inconsistent server response.
+## Solution
+The `bugSolution.js` file shows a corrected implementation that utilizes appropriate error handling techniques. Specifically, the solution properly catches and handles any exceptions in the asynchronous operation and introduces error-handling middleware to gracefully handle errors that occur within request processing.
